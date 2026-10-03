@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --main-color: #4f39f6;
+}
+body {
+  font-family: Almarai;
+
+}
+
+.btn {
+  color: white;
+  background-color: var(--main-color);
+  padding: 8px 15px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+  
+  
+
+}
+.btn:hover {
+  filter: brightness(90%);
+}
+
+.img-translate {
+  animation: translate-img 2s ease-in-out infinite;
+  
+}
+
+  @keyframes translate-img {
+    0%,
+    100% {
+      transform: translateX(-10px);
+    }
+    50% {
+      transform: translateX(10px);
+    }
+  }

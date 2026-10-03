@@ -1,0 +1,1606 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS</title>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+    <!-- === start nav === -->
+    <nav
+        class="bg-amber-300 dark:bg-indigo-600 fixed w-full z-20 top-0 inset-s-0 border-b border-blue-400 dark:border-cyan-300 drop-shadow-md">
+        <div class="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
+
+            <!-- ===== Logo ===== -->
+            <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="./assets/images/logo.png" class="h-12" alt="Kids EdTech Logo" />
+                <span class="self-center text-xl font-semibold whitespace-nowrap text-indigo-600 dark:text-amber-300">
+                    Kids EdTech
+                </span>
+            </a>
+
+            <!-- ===== الأزرار اليمنى ===== -->
+            <div class="flex items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse">
+
+                <!-- زر اللغة -->
+                <button type="button" data-dropdown-toggle="language-dropdown-menu"
+                    class="md:flex hidden items-center text-indigo-600 dark:text-amber-300 bg-transparent border border-transparent hover:bg-indigo-100 dark:hover:bg-amber-900/30 hover:text-indigo-800 dark:hover:text-amber-400 focus:ring-4 focus:ring-indigo-400 dark:focus:ring-amber-400 font-medium rounded-lg text-sm px-3 py-2 focus:outline-none transition-colors duration-200">
+                    <svg class="h-4 w-4 me-1.5" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M9.00023 16.5C13.1425 16.5 16.5005 13.1421 16.5005 9C16.5005 4.85786 13.1425 1.5 9.00023 1.5C4.85797 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85797 16.5 9.00023 16.5Z"
+                            fill="white" />
+                        <path
+                            d="M8.67548 8.99996H16.5012C16.5012 8.32308 16.4109 7.66735 16.2428 7.04358H8.67548V8.99996Z"
+                            fill="#D80027" />
+                        <path
+                            d="M8.67548 5.08712H15.4004C14.9413 4.338 14.3543 3.67585 13.6699 3.13074H8.67548V5.08712Z"
+                            fill="#D80027" />
+                        <path
+                            d="M9.0005 16.5001C10.7655 16.5001 12.3878 15.89 13.6689 14.8698H4.33209C5.61318 15.89 7.23548 16.5001 9.0005 16.5001Z"
+                            fill="#D80027" />
+                        <path
+                            d="M2.60125 12.9132H15.4C15.7686 12.3118 16.0545 11.6543 16.2425 10.9567H1.75879C1.94679 11.6543 2.23265 12.3118 2.60125 12.9132Z"
+                            fill="#D80027" />
+                        <path
+                            d="M4.97397 2.67114H5.65741L5.0217 3.13297L5.26453 3.88024L4.62884 3.41841L3.99316 3.88024L4.20292 3.23468C3.6432 3.7009 3.15262 4.24713 2.74834 4.85575H2.96732L2.56266 5.14972C2.49962 5.25489 2.43915 5.36173 2.38121 5.47015L2.57444 6.06485L2.21393 5.80293C2.12432 5.99279 2.04235 6.18692 1.96867 6.3851L2.18156 7.04036H2.96732L2.33161 7.50219L2.57444 8.24947L1.93876 7.78764L1.55798 8.0643C1.51986 8.37066 1.5 8.6827 1.5 8.99941H8.99964C8.99964 4.85763 8.99964 4.36934 8.99964 1.5C7.51811 1.5 6.13703 1.92975 4.97397 2.67114Z"
+                            fill="#1A47B8" />
+                    </svg>
+                    English (US)
+                </button>
+
+                <!-- ===== القائمة المنسدلة للغة ===== -->
+                <div class="z-50 hidden bg-amber-300 dark:bg-indigo-600 border border-blue-400 dark:border-cyan-300 rounded-lg shadow-lg w-44"
+                    id="language-dropdown-menu">
+                    <ul class="p-2 text-sm text-gray-700 dark:text-white font-medium">
+                        <li>
+                            <a href="#"
+                                class="inline-flex items-center w-full p-2 hover:bg-blue-400 dark:hover:bg-cyan-300 hover:text-gray-900 dark:hover:text-gray-900 rounded transition-colors duration-200">
+                                <svg class="h-4 w-4 me-1.5" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.00023 16.5C13.1425 16.5 16.5005 13.1421 16.5005 9C16.5005 4.85786 13.1425 1.5 9.00023 1.5C4.85797 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85797 16.5 9.00023 16.5Z"
+                                        fill="white" />
+                                    <path
+                                        d="M8.67548 8.99996H16.5012C16.5012 8.32308 16.4109 7.66735 16.2428 7.04358H8.67548V8.99996Z"
+                                        fill="#D80027" />
+                                    <path
+                                        d="M8.67548 5.08712H15.4004C14.9413 4.338 14.3543 3.67585 13.6699 3.13074H8.67548V5.08712Z"
+                                        fill="#D80027" />
+                                    <path
+                                        d="M9.0005 16.5001C10.7655 16.5001 12.3878 15.89 13.6689 14.8698H4.33209C5.61318 15.89 7.23548 16.5001 9.0005 16.5001Z"
+                                        fill="#D80027" />
+                                    <path
+                                        d="M2.60125 12.9132H15.4C15.7686 12.3118 16.0545 11.6543 16.2425 10.9567H1.75879C1.94679 11.6543 2.23265 12.3118 2.60125 12.9132Z"
+                                        fill="#D80027" />
+                                    <path
+                                        d="M4.97397 2.67114H5.65741L5.0217 3.13297L5.26453 3.88024L4.62884 3.41841L3.99316 3.88024L4.20292 3.23468C3.6432 3.7009 3.15262 4.24713 2.74834 4.85575H2.96732L2.56266 5.14972C2.49962 5.25489 2.43915 5.36173 2.38121 5.47015L2.57444 6.06485L2.21393 5.80293C2.12432 5.99279 2.04235 6.18692 1.96867 6.3851L2.18156 7.04036H2.96732L2.33161 7.50219L2.57444 8.24947L1.93876 7.78764L1.55798 8.0643C1.51986 8.37066 1.5 8.6827 1.5 8.99941H8.99964C8.99964 4.85763 8.99964 4.36934 8.99964 1.5C7.51811 1.5 6.13703 1.92975 4.97397 2.67114Z"
+                                        fill="#1A47B8" />
+                                </svg>
+                                English (US)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="inline-flex items-center w-full p-2 hover:bg-blue-400 dark:hover:bg-cyan-300 hover:text-gray-900 dark:hover:text-gray-900 rounded transition-colors duration-200">
+                                <svg class="h-4 w-4 me-1.5" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M1.96631 11.6087C3.02601 14.4647 5.77508 16.5 8.99981 16.5C12.2245 16.5 14.9736 14.4647 16.0333 11.6087L8.99981 10.9565L1.96631 11.6087Z"
+                                        fill="#FFDA44" />
+                                    <path
+                                        d="M8.99981 1.5C5.77508 1.5 3.02601 3.53531 1.96631 6.39132L8.99981 7.04347L16.0333 6.39129C14.9736 3.53531 12.2245 1.5 8.99981 1.5Z"
+                                        fill="black" />
+                                    <path
+                                        d="M1.96649 6.39136C1.66503 7.20385 1.5 8.08264 1.5 9.00004C1.5 9.91744 1.66503 10.7962 1.96649 11.6087H16.0335C16.335 10.7962 16.5 9.91744 16.5 9.00004C16.5 8.08264 16.335 7.20385 16.0335 6.39136H1.96649Z"
+                                        fill="#D80027" />
+                                </svg>
+                                Deutsch
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="inline-flex items-center w-full p-2 hover:bg-blue-400 dark:hover:bg-cyan-300 hover:text-gray-900 dark:hover:text-gray-900 rounded transition-colors duration-200">
+                                <svg class="h-4 w-4 me-1.5" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9 16.5C13.1421 16.5 16.5 13.1421 16.5 9C16.5 4.85786 13.1421 1.5 9 1.5C4.85786 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85786 16.5 9 16.5Z"
+                                        fill="white" />
+                                    <path
+                                        d="M16.5012 9.00018C16.5012 5.77544 14.4659 3.02637 11.6099 1.96667V16.0337C14.4659 14.974 16.5012 12.2249 16.5012 9.00018Z"
+                                        fill="#D80027" />
+                                    <path
+                                        d="M1.5 8.99994C1.5 12.2247 3.53531 14.9737 6.39132 16.0334V1.96643C3.53531 3.02613 1.5 5.7752 1.5 8.99994Z"
+                                        fill="#249F58" />
+                                </svg>
+                                Italiano
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="inline-flex items-center w-full p-2 hover:bg-blue-400 dark:hover:bg-cyan-300 hover:text-gray-900 dark:hover:text-gray-900 rounded transition-colors duration-200">
+                                <svg class="h-4 w-4 me-1.5" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9 16.5C13.1421 16.5 16.5 13.1421 16.5 9C16.5 4.85786 13.1421 1.5 9 1.5C4.85786 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85786 16.5 9 16.5Z"
+                                        fill="#D80027" />
+                                    <path
+                                        d="M5.60449 6.06458L6.25195 8.05676H8.34668L6.65332 9.29016L7.30078 11.2823L5.60449 10.0519L3.9082 11.2823L4.55859 9.29016L2.8623 8.05676H4.95703L5.60449 6.06458Z"
+                                        fill="#FFDA44" />
+                                    <path
+                                        d="M10.3906 13.1162L9.89551 12.5068L9.16309 12.791L9.58789 12.1318L9.09277 11.5195L9.85156 11.7217L10.2793 11.0625L10.3203 11.8477L11.082 12.0498L10.3467 12.3311L10.3906 13.1162Z"
+                                        fill="#FFDA44" />
+                                    <path
+                                        d="M11.375 11.3291L11.6094 10.5791L10.9678 10.125L11.7529 10.1133L11.9844 9.36328L12.2393 10.1074L13.0244 10.0986L12.3945 10.5674L12.6465 11.3115L12.0049 10.8574L11.375 11.3291Z"
+                                        fill="#FFDA44" />
+                                    <path
+                                        d="M12.7041 7.00488L12.3584 7.71094L12.9209 8.25879L12.1445 8.14746L11.7988 8.85059L11.6641 8.07715L10.8848 7.96582L11.582 7.59961L11.4473 6.82324L12.0098 7.37109L12.7041 7.00488Z"
+                                        fill="#FFDA44" />
+                                    <path
+                                        d="M10.4126 4.86621L10.354 5.64844L11.0835 5.94434L10.3188 6.13184L10.2632 6.91699L9.8501 6.24902L9.08545 6.43652L9.59229 5.83594L9.17627 5.1709L9.90576 5.4668L10.4126 4.86621Z"
+                                        fill="#FFDA44" />
+                                </svg>
+                                中文 (繁體)
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- ===== زر الهامبرغر (للجوال) ===== -->
+                <button data-collapse-toggle="navbar-language" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-indigo-600 dark:text-amber-300 rounded-lg md:hidden hover:bg-indigo-100 dark:hover:bg-amber-900/30 focus:outline-none focus:ring-2 focus:ring-indigo-400 dark:focus:ring-amber-400 transition-colors duration-200"
+                    aria-controls="navbar-language" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+
+                    <!-- أيقونة الهامبرغر (تظهر لما القائمة مغلقة) -->
+                    <svg id="menu-open-icon" class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                            d="M5 7h14M5 12h14M5 17h14" />
+                    </svg>
+
+                    <!-- أيقونة الإغلاق X (تظهر لما القائمة مفتوحة) -->
+                    <svg id="menu-close-icon" class="hidden w-6 h-6" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- ===== قائمة الروابط الرئيسية (مغلقة افتراضياً) ===== -->
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-language">
+                <ul
+                    class="font-medium flex flex-col md:flex-row md:items-center p-4 md:p-0 mt-4 border border-blue-400 dark:border-cyan-300 rounded-lg bg-white/95 dark:bg-indigo-600 backdrop-blur-sm md:mt-0 md:border-0 md:bg-transparent md:backdrop-blur-none md:space-x-8 rtl:space-x-reverse shadow-lg md:shadow-none w-full md:w-auto">
+
+                    <li class="w-full md:w-auto border-b border-blue-200 dark:border-indigo-500 md:border-none">
+                        <a href="#"
+                            class="block py-3 px-4 text-indigo-600 dark:text-amber-300 rounded hover:bg-indigo-100 dark:hover:bg-amber-900/30 hover:text-indigo-800 dark:hover:text-amber-400 transition-colors duration-200 md:bg-transparent md:p-0 md:py-2"
+                            aria-current="page">
+                            🏠 Home
+                        </a>
+                    </li>
+                    <li class="w-full md:w-auto border-b border-blue-200 dark:border-indigo-500 md:border-none">
+                        <a href="#"
+                            class="block py-3 px-4 text-indigo-600 dark:text-amber-300 rounded hover:bg-indigo-100 dark:hover:bg-amber-900/30 hover:text-indigo-800 dark:hover:text-amber-400 transition-colors duration-200 md:bg-transparent md:p-0 md:py-2">
+                            🗺️ Adventures
+                        </a>
+                    </li>
+                    <li class="w-full md:w-auto border-b border-blue-200 dark:border-indigo-500 md:border-none">
+                        <a href="#"
+                            class="block py-3 px-4 text-indigo-600 dark:text-amber-300 rounded hover:bg-indigo-100 dark:hover:bg-amber-900/30 hover:text-indigo-800 dark:hover:text-amber-400 transition-colors duration-200 md:bg-transparent md:p-0 md:py-2">
+                            🏆 Achievements
+                        </a>
+                    </li>
+                    <li class="w-full md:w-auto border-b border-blue-200 dark:border-indigo-500 md:border-none">
+                        <a href="#"
+                            class="block py-3 px-4 text-indigo-600 dark:text-amber-300 rounded hover:bg-indigo-100 dark:hover:bg-amber-900/30 hover:text-indigo-800 dark:hover:text-amber-400 transition-colors duration-200 md:bg-transparent md:p-0 md:py-2">
+                            🎮 Games
+                        </a>
+                    </li>
+                    <li class="w-full md:w-auto border-b border-blue-200 dark:border-indigo-500 md:border-none">
+                        <a href="#"
+                            class="block py-3 px-4 text-indigo-600 dark:text-amber-300 rounded hover:bg-indigo-100 dark:hover:bg-amber-900/30 hover:text-indigo-800 dark:hover:text-amber-400 transition-colors duration-200 md:bg-transparent md:p-0 md:py-2">
+                            👨‍👩‍👦 Parents
+                        </a>
+                    </li>
+
+                    <li
+                        class="w-full md:w-auto mt-2 md:mt-0 pt-2 md:pt-0 border-t border-blue-200 dark:border-indigo-500 md:border-none">
+                        <button id="theme-toggle" type="button"
+                            class="w-full md:w-auto flex items-center justify-center md:justify-start text-indigo-600 dark:text-amber-300 hover:text-indigo-800 dark:hover:text-amber-400 hover:bg-indigo-100 dark:hover:bg-amber-900/30 focus:outline-none focus:ring-2 focus:ring-indigo-400 dark:focus:ring-amber-400 rounded-lg text-sm px-4 py-3 md:py-2.5 transition-colors duration-200">
+
+                            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 me-2" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                            </svg>
+
+                            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 me-2" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                    fill-rule="evenodd" clip-rule="evenodd"></path>
+                            </svg>
+
+                            <span class="md:hidden">🌙 </span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- === end nav === -->
+
+
+    <!-- === start hero section === -->
+    <section
+        class="hero pt-28 bg-linear-to-br from-amber-200 via-amber-100 to-cyan-100 dark:from-indigo-500 dark:via-indigo-600 dark:to-indigo-700">
+
+        <div class="flex mx-auto max-w-7xl px-4 py-8">
+            <div class="hero-info w-full md:w-1/2 flex flex-col justify-center text-center md:text-left">
+                <h1 class="text-indigo-600 dark:text-amber-300 text-4xl md:text-5xl font-bold mb-3">
+                    Kids Educational Technology
+                </h1>
+                <h2 class="text-amber-400 dark:text-cyan-300 text-3xl md:text-4xl font-bold mb-4">
+                    <span class="hidden md:inline">🚀</span>Make Learning Fun!
+                </h2>
+                <p class="text-gray-700 dark:text-amber-100 w-full md:w-[80%] text-base md:text-lg">
+                    Discover educational adventures, play and learn with your friends, and earn stars and badges every
+                    step of the way
+                </p>
+                <div
+                    class="mt-6 flex flex-col sm:flex-row sm:justify-center md:justify-start sm:space-x-4 space-y-3 sm:space-y-0">
+                    <a href="#"
+                        class="inline-flex items-center justify-center text-white bg-blue-400 hover:bg-blue-500 dark:bg-cyan-300 dark:hover:bg-cyan-400 dark:text-indigo-900 border border-transparent font-medium rounded-lg text-base px-6 py-3 focus:outline-none transition-colors duration-200">
+                        Start Your Adventure
+                        <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 12H5m14 0-4 4m4-4-4-4" />
+                        </svg>
+                    </a>
+                    <a href="#"
+                        class="inline-flex items-center justify-center text-indigo-600 dark:text-white bg-amber-300 dark:bg-indigo-500 border dark:border-indigo-400 hover:bg-amber-400 dark:hover:bg-indigo-400 hover:text-indigo-800 dark:hover:text-white  font-medium rounded-lg text-base px-6 py-3 focus:outline-none transition-colors duration-200">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+            <div class="hero-img w-1/2 hidden md:flex justify-end items-center">
+                <img src="assets/images/home1.png" class="w-[85%] rounded-2xl shadow-2xl img-translate"
+                    alt="Kids Learning">
+            </div>
+        </div>
+    </section>
+    <!-- === end hero section === -->
+
+
+    <!-- ===== Start Features Section ===== -->
+    <section
+        class="features py-16 md:py-24 bg-linear-to-br from-cyan-100 via-amber-100 to-amber-200 dark:from-indigo-700 dark:via-indigo-800 dark:to-indigo-900">
+        <div class="max-w-7xl mx-auto px-4">
+
+            <!-- ===== عنوان القسم ===== -->
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-indigo-600 dark:text-amber-300 mb-4">
+                    ✨ Amazing Features for Kids
+                </h2>
+                <p class="text-gray-700 dark:text-amber-100 text-base md:text-lg max-w-2xl mx-auto">
+                    Everything your child needs to learn, play, and grow in one fun and safe place
+                </p>
+            </div>
+
+            <!-- ===== شبكة الميزات ===== -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+
+                <!-- ===== الميزة 1 ===== -->
+                <div
+                    class="feature-card bg-white/95 dark:bg-indigo-700/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-blue-400/30 dark:border-cyan-300/30">
+                    <div
+                        class="flex items-center justify-center w-16 h-16 mb-5 rounded-full bg-amber-300 dark:bg-amber-400">
+                        <span class="text-3xl">🎮</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-indigo-600 dark:text-amber-300 mb-3">
+                        Fun Learning Games
+                    </h3>
+                    <p class="text-gray-700 dark:text-amber-100 text-sm md:text-base">
+                        Interactive games that make learning exciting and help kids develop new skills while having fun
+                    </p>
+                </div>
+
+                <!-- ===== الميزة 2 ===== -->
+                <div
+                    class="feature-card bg-white/95 dark:bg-indigo-700/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-blue-400/30 dark:border-cyan-300/30">
+                    <div
+                        class="flex items-center justify-center w-16 h-16 mb-5 rounded-full bg-blue-400 dark:bg-cyan-300">
+                        <span class="text-3xl">🏆</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-indigo-600 dark:text-amber-300 mb-3">
+                        Rewards & Badges
+                    </h3>
+                    <p class="text-gray-700 dark:text-amber-100 text-sm md:text-base">
+                        Earn stars, badges, and trophies as you complete lessons and challenges to stay motivated
+                    </p>
+                </div>
+
+                <!-- ===== الميزة 3 ===== -->
+                <div
+                    class="feature-card bg-white/95 dark:bg-indigo-700/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-blue-400/30 dark:border-cyan-300/30">
+                    <div
+                        class="flex items-center justify-center w-16 h-16 mb-5 rounded-full bg-amber-300 dark:bg-amber-400">
+                        <span class="text-3xl">🗺️</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-indigo-600 dark:text-amber-300 mb-3">
+                        Learning Adventures
+                    </h3>
+                    <p class="text-gray-700 dark:text-amber-100 text-sm md:text-base">
+                        Explore exciting educational journeys with maps, levels, and quests that make learning an
+                        adventure
+                    </p>
+                </div>
+
+                <!-- ===== الميزة 4 ===== -->
+                <div
+                    class="feature-card bg-white/95 dark:bg-indigo-700/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-blue-400/30 dark:border-cyan-300/30">
+                    <div
+                        class="flex items-center justify-center w-16 h-16 mb-5 rounded-full bg-blue-400 dark:bg-cyan-300">
+                        <span class="text-3xl">👨‍👩‍👦</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-indigo-600 dark:text-amber-300 mb-3">
+                        Parent Dashboard
+                    </h3>
+                    <p class="text-gray-700 dark:text-amber-100 text-sm md:text-base">
+                        Track your child's progress, achievements, and learning journey with detailed reports
+                    </p>
+                </div>
+
+                <!-- ===== الميزة 5 ===== -->
+                <div
+                    class="feature-card bg-white/95 dark:bg-indigo-700/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-blue-400/30 dark:border-cyan-300/30">
+                    <div
+                        class="flex items-center justify-center w-16 h-16 mb-5 rounded-full bg-amber-300 dark:bg-amber-400">
+                        <span class="text-3xl">🛡️</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-indigo-600 dark:text-amber-300 mb-3">
+                        Safe Environment
+                    </h3>
+                    <p class="text-gray-700 dark:text-amber-100 text-sm md:text-base">
+                        A completely safe and ad-free space designed specifically for children to learn and grow
+                    </p>
+                </div>
+
+                <!-- ===== الميزة 6 ===== -->
+                <div
+                    class="feature-card bg-white/95 dark:bg-indigo-700/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-blue-400/30 dark:border-cyan-300/30">
+                    <div
+                        class="flex items-center justify-center w-16 h-16 mb-5 rounded-full bg-blue-400 dark:bg-cyan-300">
+                        <span class="text-3xl">🌍</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-indigo-600 dark:text-amber-300 mb-3">
+                        Multiple Languages
+                    </h3>
+                    <p class="text-gray-700 dark:text-amber-100 text-sm md:text-base">
+                        Learn in multiple languages including English, Arabic, German, Italian, and Chinese
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== End Features Section ===== -->
+
+
+    <!-- ===== Start Categories Section ===== -->
+    <section
+        class="categories py-16 md:py-24 bg-linear-to-br from-amber-200 via-amber-100 to-cyan-100 dark:from-indigo-900 dark:via-indigo-800 dark:to-indigo-700">
+        <div class="max-w-7xl mx-auto px-4">
+
+            <!-- ===== عنوان القسم ===== -->
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-indigo-600 dark:text-amber-300 mb-4">
+                    <i class="fa-solid fa-shapes me-2"></i>
+                    Explore Learning Categories
+                </h2>
+                <p class="text-gray-700 dark:text-amber-100 text-base md:text-lg max-w-2xl mx-auto">
+                    Choose from a wide range of fun categories designed to spark curiosity and creativity
+                </p>
+            </div>
+
+            <!-- ===== شبكة التصنيفات ===== -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+
+                <!-- ===== التصنيف 1: الرياضيات ===== -->
+                <a href="#"
+                    class="category-card group bg-white/95 dark:bg-indigo-700/95 backdrop-blur-sm rounded-2xl p-5 md:p-6 text-center shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-blue-400/30 dark:border-cyan-300/30">
+                    <div
+                        class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-blue-400 dark:bg-cyan-300 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-calculator text-2xl text-white dark:text-indigo-900"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-indigo-600 dark:text-amber-300 mb-1">Math</h3>
+                    <p class="text-xs md:text-sm text-gray-600 dark:text-amber-100">Numbers & Logic</p>
+                </a>
+
+                <!-- ===== التصنيف 2: العلوم ===== -->
+                <a href="#"
+                    class="category-card group bg-white/95 dark:bg-indigo-700/95 backdrop-blur-sm rounded-2xl p-5 md:p-6 text-center shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-blue-400/30 dark:border-cyan-300/30">
+                    <div
+                        class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-amber-300 dark:bg-amber-400 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-flask text-2xl text-indigo-600 dark:text-indigo-900"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-indigo-600 dark:text-amber-300 mb-1">Science</h3>
+                    <p class="text-xs md:text-sm text-gray-600 dark:text-amber-100">Explore & Discover</p>
+                </a>
+
+                <!-- ===== التصنيف 3: اللغة ===== -->
+                <a href="#"
+                    class="category-card group bg-white/95 dark:bg-indigo-700/95 backdrop-blur-sm rounded-2xl p-5 md:p-6 text-center shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-blue-400/30 dark:border-cyan-300/30">
+                    <div
+                        class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-blue-400 dark:bg-cyan-300 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-book-open text-2xl text-white dark:text-indigo-900"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-indigo-600 dark:text-amber-300 mb-1">Language</h3>
+                    <p class="text-xs md:text-sm text-gray-600 dark:text-amber-100">Reading & Writing</p>
+                </a>
+
+                <!-- ===== التصنيف 4: الفنون ===== -->
+                <a href="#"
+                    class="category-card group bg-white/95 dark:bg-indigo-700/95 backdrop-blur-sm rounded-2xl p-5 md:p-6 text-center shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-blue-400/30 dark:border-cyan-300/30">
+                    <div
+                        class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-amber-300 dark:bg-amber-400 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-palette text-2xl text-indigo-600 dark:text-indigo-900"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-indigo-600 dark:text-amber-300 mb-1">Art</h3>
+                    <p class="text-xs md:text-sm text-gray-600 dark:text-amber-100">Drawing & Colors</p>
+                </a>
+
+                <!-- ===== التصنيف 5: الموسيقى ===== -->
+                <a href="#"
+                    class="category-card group bg-white/95 dark:bg-indigo-700/95 backdrop-blur-sm rounded-2xl p-5 md:p-6 text-center shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-blue-400/30 dark:border-cyan-300/30">
+                    <div
+                        class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-blue-400 dark:bg-cyan-300 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-music text-2xl text-white dark:text-indigo-900"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-indigo-600 dark:text-amber-300 mb-1">Music</h3>
+                    <p class="text-xs md:text-sm text-gray-600 dark:text-amber-100">Songs & Rhythm</p>
+                </a>
+
+                <!-- ===== التصنيف 6: الجغرافيا ===== -->
+                <a href="#"
+                    class="category-card group bg-white/95 dark:bg-indigo-700/95 backdrop-blur-sm rounded-2xl p-5 md:p-6 text-center shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-blue-400/30 dark:border-cyan-300/30">
+                    <div
+                        class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-amber-300 dark:bg-amber-400 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-earth-americas text-2xl text-indigo-600 dark:text-indigo-900"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-indigo-600 dark:text-amber-300 mb-1">Geography</h3>
+                    <p class="text-xs md:text-sm text-gray-600 dark:text-amber-100">World & Maps</p>
+                </a>
+
+                <!-- ===== التصنيف 7: التاريخ ===== -->
+                <a href="#"
+                    class="category-card group bg-white/95 dark:bg-indigo-700/95 backdrop-blur-sm rounded-2xl p-5 md:p-6 text-center shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-blue-400/30 dark:border-cyan-300/30">
+                    <div
+                        class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-blue-400 dark:bg-cyan-300 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-landmark text-2xl text-white dark:text-indigo-900"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-indigo-600 dark:text-amber-300 mb-1">History</h3>
+                    <p class="text-xs md:text-sm text-gray-600 dark:text-amber-100">Stories & Past</p>
+                </a>
+
+                <!-- ===== التصنيف 8: الرياضة ===== -->
+                <a href="#"
+                    class="category-card group bg-white/95 dark:bg-indigo-700/95 backdrop-blur-sm rounded-2xl p-5 md:p-6 text-center shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-blue-400/30 dark:border-cyan-300/30">
+                    <div
+                        class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-amber-300 dark:bg-amber-400 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-futbol text-2xl text-indigo-600 dark:text-indigo-900"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-indigo-600 dark:text-amber-300 mb-1">Sports</h3>
+                    <p class="text-xs md:text-sm text-gray-600 dark:text-amber-100">Games & Fitness</p>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== End Categories Section ===== -->
+
+
+    <!-- ===== Start About Us Section ===== -->
+    <section
+        class="about py-16 md:py-24 bg-linear-to-br from-cyan-100 via-amber-100 to-amber-200 dark:from-indigo-700 dark:via-indigo-800 dark:to-indigo-900">
+        <div class="max-w-7xl mx-auto px-4">
+
+            <!-- ===== المحتوى (نص + صورة) ===== -->
+            <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+
+                <!-- ===== الجزء النصي ===== -->
+                <div class="about-info w-full lg:w-1/2 text-center lg:text-left">
+
+                    <span
+                        class="inline-block text-sm font-semibold text-indigo-600 dark:text-amber-300 bg-indigo-100 dark:bg-amber-900/30 px-4 py-1.5 rounded-full mb-4">
+                        <i class="fa-solid fa-star me-1.5"></i>
+                        About Kids EdTech
+                    </span>
+
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-indigo-600 dark:text-amber-300 mb-6">
+                        We Make Learning Fun & Magical 🚀
+                    </h2>
+
+                    <p class="text-gray-700 dark:text-amber-100! text-base md:text-lg mb-5">
+                        Kids EdTech is a safe and exciting learning platform designed for children to explore, play, and
+                        grow. We believe that education should be an adventure, not a chore.
+                    </p>
+
+                    <p class="text-gray-700 dark:text-amber-100! text-base md:text-lg mb-8">
+                        Our mission is to spark curiosity in every child through interactive lessons, fun games, and
+                        rewarding challenges that build confidence and creativity.
+                    </p>
+
+                    <!-- ===== مميزات سريعة ===== -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+
+                        <div class="flex items-center gap-3 text-left">
+                            <div
+                                class="shrink-0 w-10 h-10 rounded-full bg-blue-400 dark:bg-cyan-300 flex items-center justify-center">
+                                <i class="fa-solid fa-check text-white dark:text-indigo-900"></i>
+                            </div>
+                            <span class="text-gray-700 dark:text-amber-100! font-medium">Safe & Ad-Free</span>
+                        </div>
+
+                        <div class="flex items-center gap-3 text-left">
+                            <div
+                                class="shrink-0 w-10 h-10 rounded-full bg-amber-300 dark:bg-amber-400 flex items-center justify-center">
+                                <i class="fa-solid fa-check text-indigo-600 dark:text-indigo-900"></i>
+                            </div>
+                            <span class="text-gray-700 dark:text-amber-100! font-medium">Fun & Interactive</span>
+                        </div>
+
+                        <div class="flex items-center gap-3 text-left">
+                            <div
+                                class="shrink-0 w-10 h-10 rounded-full bg-blue-400 dark:bg-cyan-300 flex items-center justify-center">
+                                <i class="fa-solid fa-check text-white dark:text-indigo-900"></i>
+                            </div>
+                            <span class="text-gray-700 dark:text-amber-100! font-medium">Expert-Designed</span>
+                        </div>
+
+                        <div class="flex items-center gap-3 text-left">
+                            <div
+                                class="shrink-0 w-10 h-10 rounded-full bg-amber-300 dark:bg-amber-400 flex items-center justify-center">
+                                <i class="fa-solid fa-check text-indigo-600 dark:text-indigo-900"></i>
+                            </div>
+                            <span class="text-gray-700 dark:text-amber-100! font-medium">Kid-Friendly</span>
+                        </div>
+
+                    </div>
+
+                    <!-- ===== زر ===== -->
+                    <a href="#"
+                        class="inline-flex items-center justify-center text-white bg-blue-400 hover:bg-blue-500 dark:bg-cyan-300 dark:hover:bg-cyan-400 dark:text-indigo-900 border border-transparent focus:ring-4 focus:ring-blue-300 dark:focus:ring-cyan-200 font-medium rounded-lg text-base px-6 py-3 focus:outline-none transition-colors duration-200">
+                        Learn More About Us
+                        <svg class="w-4 h-4 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 12H5m14 0-4 4m4-4-4-4" />
+                        </svg>
+                    </a>
+
+                </div>
+
+                <!-- ===== الجزء البصري (صورة + إحصائيات) ===== -->
+                <div class="hidden md:block about-img w-full lg:w-1/2 relative">
+
+                    <!-- الصورة الرئيسية -->
+                    <div class="relative">
+                        <img src="assets/images/aboutus.png" class="w-full rounded-2xl shadow-2xl"
+                            alt="About Kids EdTech">
+
+                        <!-- بطاقة إحصائية عائمة -->
+                        <div
+                            class="absolute -bottom-6 -left-4 md:-left-8 bg-white dark:bg-indigo-700 rounded-2xl shadow-xl p-2 md:p-5 border border-blue-400/30 dark:border-cyan-300/30">
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-amber-300 dark:bg-amber-400 flex items-center justify-center">
+                                    <i class="fa-solid fa-users text-xl text-indigo-600 dark:text-indigo-900"></i>
+                                </div>
+                                <div>
+                                    <p class="text-2xl font-bold text-indigo-600 dark:text-amber-300">10K+</p>
+                                    <p class="text-xs text-gray-600 dark:text-amber-100!">Happy Kids</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- بطاقة إحصائية عائمة 2 -->
+                        <div
+                            class="absolute -top-6 -right-4 md:-right-8 bg-white dark:bg-indigo-700 rounded-2xl shadow-xl p-2 md:p-5 border border-blue-400/30 dark:border-cyan-300/30">
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-blue-400 dark:bg-cyan-300 flex items-center justify-center">
+                                    <i class="fa-solid fa-book text-xl text-white dark:text-indigo-900"></i>
+                                </div>
+                                <div>
+                                    <p class="text-2xl font-bold text-indigo-600 dark:text-amber-300">500+</p>
+                                    <p class="text-xs text-gray-600 dark:text-amber-100!">Lessons</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== End About Us Section ===== -->
+
+    <!-- ===== Start Courses Section ===== -->
+
+    <section
+        class="courses py-16 md:py-24 bg-gradient-to-br from-amber-200 via-amber-100 to-cyan-100 dark:from-indigo-900 dark:via-indigo-800 dark:to-indigo-700">
+        <div class="max-w-7xl mx-auto px-4">
+
+            <!-- ===== عنوان القسم ===== -->
+            <div class="text-center mb-12 md:mb-16">
+                <span
+                    class="inline-block text-sm font-semibold text-indigo-600 dark:text-amber-300 bg-indigo-100 dark:bg-amber-900/30 px-4 py-1.5 rounded-full mb-4">
+                    <i class="fa-solid fa-graduation-cap me-1.5"></i>
+                    Popular Courses
+                </span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-indigo-600 dark:text-amber-300 mb-4">
+                    Explore Our Fun Courses 🎓
+                </h2>
+                <p class="text-gray-700 dark:text-amber-100! text-base md:text-lg max-w-2xl mx-auto">
+                    Discover a wide range of interactive courses designed to make learning exciting for every child
+                </p>
+            </div>
+
+            <!-- ===== Swiper Container ===== -->
+            <div class="swiper courses-swiper !pb-14">
+                <div class="swiper-wrapper">
+
+                    <!-- ===== البطاقة 1 ===== -->
+                    <div class="swiper-slide h-auto">
+                        <div
+                            class="course-card group h-full bg-white/95 dark:bg-indigo-700/95 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-blue-400/30 dark:border-cyan-300/30">
+                            <div class="relative overflow-hidden">
+                                <img src="assets/images/numbers.jpg"
+                                    class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                                    alt="Math Course">
+                                <span
+                                    class="absolute top-4 left-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full">-30%</span>
+                                <span
+                                    class="absolute top-4 right-4 bg-white/90 dark:bg-indigo-800/90 text-indigo-600 dark:text-amber-300 text-xs font-bold px-3 py-1 rounded-full">
+                                    <i class="fa-solid fa-star text-amber-400 me-1"></i> 4.9
+                                </span>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center gap-2 mb-3">
+                                    <i class="fa-solid fa-calculator text-blue-400 dark:text-cyan-300"></i>
+                                    <span
+                                        class="text-xs font-semibold text-gray-600 dark:text-amber-100! uppercase tracking-wider">Mathematics</span>
+                                </div>
+                                <h3
+                                    class="text-xl font-bold text-indigo-600 dark:text-amber-300 mb-2 group-hover:text-blue-400 dark:group-hover:text-cyan-300 transition-colors duration-200">
+                                    Fun with Numbers
+                                </h3>
+                                <p class="text-sm text-gray-600 dark:text-amber-100! mb-5">
+                                    Learn counting, addition, and subtraction through fun games and colorful activities
+                                    designed for young learners.
+                                </p>
+                                <div
+                                    class="flex items-center justify-between mb-5 pt-4 border-t border-blue-400/20 dark:border-cyan-300/20">
+                                    <div class="flex items-baseline gap-2">
+                                        <span class="text-sm text-gray-400 dark:text-gray-500 line-through">$49</span>
+                                        <span class="text-2xl font-bold text-indigo-600 dark:text-amber-300">$34</span>
+                                    </div>
+                                    <span
+                                        class="text-xs font-medium text-green-600 dark:text-green-400 bg-green-100 dark:bg-green-900/30 px-2 py-1 rounded">Save
+                                        $15</span>
+                                </div>
+                                <a href="./course-details.html"
+                                    class="w-full inline-flex items-center justify-center text-white bg-blue-400 hover:bg-blue-500 dark:bg-cyan-300 dark:hover:bg-cyan-400 dark:text-indigo-900 font-medium rounded-lg text-sm px-5 py-2.5 transition-colors duration-200">
+                                    <i class="fa-solid fa-cart-shopping me-2"></i> Enroll Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== البطاقة 2 ===== -->
+                    <div class="swiper-slide h-auto">
+                        <div
+                            class="course-card group h-full bg-white/95 dark:bg-indigo-700/95 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-blue-400/30 dark:border-cyan-300/30">
+                            <div class="relative overflow-hidden">
+                                <img src="assets/images/science.jpg"
+                                    class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                                    alt="Science Course">
+                                <span
+                                    class="absolute top-4 left-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full">-25%</span>
+                                <span
+                                    class="absolute top-4 right-4 bg-white/90 dark:bg-indigo-800/90 text-indigo-600 dark:text-amber-300 text-xs font-bold px-3 py-1 rounded-full">
+                                    <i class="fa-solid fa-star text-amber-400 me-1"></i> 4.8
+                                </span>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center gap-2 mb-3">
+                                    <i class="fa-solid fa-flask text-amber-400 dark:text-amber-300"></i>
+                                    <span
+                                        class="text-xs font-semibold text-gray-600 dark:text-amber-100! uppercase tracking-wider">Science</span>
+                                </div>
+                                <h3
+                                    class="text-xl font-bold text-indigo-600 dark:text-amber-300 mb-2 group-hover:text-blue-400 dark:group-hover:text-cyan-300 transition-colors duration-200">
+                                    Amazing Science Lab
+                                </h3>
+                                <p class="text-sm text-gray-600 dark:text-amber-100! mb-5">
+                                    Discover amazing experiments, learn about animals, plants, and the world around us
+                                    in a fun way.
+                                </p>
+                                <div
+                                    class="flex items-center justify-between mb-5 pt-4 border-t border-blue-400/20 dark:border-cyan-300/20">
+                                    <div class="flex items-baseline gap-2">
+                                        <span class="text-sm text-gray-400 dark:text-gray-500 line-through">$59</span>
+                                        <span class="text-2xl font-bold text-indigo-600 dark:text-amber-300">$44</span>
+                                    </div>
+                                    <span
+                                        class="text-xs font-medium text-green-600 dark:text-green-400 bg-green-100 dark:bg-green-900/30 px-2 py-1 rounded">Save
+                                        $15</span>
+                                </div>
+                                <a href="./course-details.html"
+                                    class="w-full inline-flex items-center justify-center text-white bg-blue-400 hover:bg-blue-500 dark:bg-cyan-300 dark:hover:bg-cyan-400 dark:text-indigo-900 font-medium rounded-lg text-sm px-5 py-2.5 transition-colors duration-200">
+                                    <i class="fa-solid fa-cart-shopping me-2"></i> Enroll Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== البطاقة 3 ===== -->
+                    <div class="swiper-slide h-auto">
+                        <div
+                            class="course-card group h-full bg-white/95 dark:bg-indigo-700/95 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-blue-400/30 dark:border-cyan-300/30">
+                            <div class="relative overflow-hidden">
+                                <img src="assets/images/draw.jpg"
+                                    class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                                    alt="Art Course">
+                                <span
+                                    class="absolute top-4 left-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full">-40%</span>
+                                <span
+                                    class="absolute top-4 right-4 bg-white/90 dark:bg-indigo-800/90 text-indigo-600 dark:text-amber-300 text-xs font-bold px-3 py-1 rounded-full">
+                                    <i class="fa-solid fa-star text-amber-400 me-1"></i> 5.0
+                                </span>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center gap-2 mb-3">
+                                    <i class="fa-solid fa-palette text-blue-400 dark:text-cyan-300"></i>
+                                    <span
+                                        class="text-xs font-semibold text-gray-600 dark:text-amber-100! uppercase tracking-wider">Art
+                                        & Craft</span>
+                                </div>
+                                <h3
+                                    class="text-xl font-bold text-indigo-600 dark:text-amber-300 mb-2 group-hover:text-blue-400 dark:group-hover:text-cyan-300 transition-colors duration-200">
+                                    Creative Drawing
+                                </h3>
+                                <p class="text-sm text-gray-600 dark:text-amber-100! mb-5">
+                                    Unleash creativity with drawing and fun craft projects designed for young
+                                    artists. Your child will learn basic art techniques.
+                                </p>
+                                <div
+                                    class="flex items-center justify-between mb-5 pt-4 border-t border-blue-400/20 dark:border-cyan-300/20">
+                                    <div class="flex items-baseline gap-2">
+                                        <span class="text-sm text-gray-400 dark:text-gray-500 line-through">$39</span>
+                                        <span class="text-2xl font-bold text-indigo-600 dark:text-amber-300">$23</span>
+                                    </div>
+                                    <span
+                                        class="text-xs font-medium text-green-600 dark:text-green-400 bg-green-100 dark:bg-green-900/30 px-2 py-1 rounded">Save
+                                        $16</span>
+                                </div>
+                                <a href="./course-details.html"
+                                    class="w-full inline-flex items-center justify-center text-white bg-blue-400 hover:bg-blue-500 dark:bg-cyan-300 dark:hover:bg-cyan-400 dark:text-indigo-900 font-medium rounded-lg text-sm px-5 py-2.5 transition-colors duration-200">
+                                    <i class="fa-solid fa-cart-shopping me-2"></i> Enroll Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== البطاقة 4 ===== -->
+                    <div class="swiper-slide h-auto">
+                        <div
+                            class="course-card group h-full bg-white/95 dark:bg-indigo-700/95 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-blue-400/30 dark:border-cyan-300/30">
+                            <div class="relative overflow-hidden">
+                                <img src="assets/images/english1.jpg"
+                                    class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                                    alt="Language Course">
+                                <span
+                                    class="absolute top-4 left-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full">-20%</span>
+                                <span
+                                    class="absolute top-4 right-4 bg-white/90 dark:bg-indigo-800/90 text-indigo-600 dark:text-amber-300 text-xs font-bold px-3 py-1 rounded-full">
+                                    <i class="fa-solid fa-star text-amber-400 me-1"></i> 4.7
+                                </span>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center gap-2 mb-3">
+                                    <i class="fa-solid fa-book-open text-amber-400 dark:text-amber-300"></i>
+                                    <span
+                                        class="text-xs font-semibold text-gray-600 dark:text-amber-100! uppercase tracking-wider">Language</span>
+                                </div>
+                                <h3
+                                    class="text-xl font-bold text-indigo-600 dark:text-amber-300 mb-2 group-hover:text-blue-400 dark:group-hover:text-cyan-300 transition-colors duration-200">
+                                    English for Kids
+                                </h3>
+                                <p class="text-sm text-gray-600 dark:text-amber-100! mb-5">
+                                    Learn English through stories, songs, and interactive games that make it fun and
+                                    easy.
+                                </p>
+                                <div
+                                    class="flex items-center justify-between mb-5 pt-4 border-t border-blue-400/20 dark:border-cyan-300/20">
+                                    <div class="flex items-baseline gap-2">
+                                        <span class="text-sm text-gray-400 dark:text-gray-500 line-through">$69</span>
+                                        <span class="text-2xl font-bold text-indigo-600 dark:text-amber-300">$55</span>
+                                    </div>
+                                    <span
+                                        class="text-xs font-medium text-green-600 dark:text-green-400 bg-green-100 dark:bg-green-900/30 px-2 py-1 rounded">Save
+                                        $14</span>
+                                </div>
+                                <a href="./course-details.html"
+                                    class="w-full inline-flex items-center justify-center text-white bg-blue-400 hover:bg-blue-500 dark:bg-cyan-300 dark:hover:bg-cyan-400 dark:text-indigo-900 font-medium rounded-lg text-sm px-5 py-2.5 transition-colors duration-200">
+                                    <i class="fa-solid fa-cart-shopping me-2"></i> Enroll Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== البطاقة 5 ===== -->
+                    <div class="swiper-slide h-auto">
+                        <div
+                            class="course-card group h-full bg-white/95 dark:bg-indigo-700/95 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-blue-400/30 dark:border-cyan-300/30">
+                            <div class="relative overflow-hidden">
+                                <img src="assets/images/music1.jpg"
+                                    class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                                    alt="Music Course">
+                                <span
+                                    class="absolute top-4 left-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full">-35%</span>
+                                <span
+                                    class="absolute top-4 right-4 bg-white/90 dark:bg-indigo-800/90 text-indigo-600 dark:text-amber-300 text-xs font-bold px-3 py-1 rounded-full">
+                                    <i class="fa-solid fa-star text-amber-400 me-1"></i> 4.9
+                                </span>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center gap-2 mb-3">
+                                    <i class="fa-solid fa-music text-blue-400 dark:text-cyan-300"></i>
+                                    <span
+                                        class="text-xs font-semibold text-gray-600 dark:text-amber-100! uppercase tracking-wider">Music</span>
+                                </div>
+                                <h3
+                                    class="text-xl font-bold text-indigo-600 dark:text-amber-300 mb-2 group-hover:text-blue-400 dark:group-hover:text-cyan-300 transition-colors duration-200">
+                                    Sing & Learn
+                                </h3>
+                                <p class="text-sm text-gray-600 dark:text-amber-100! mb-5">
+                                    Learn rhythm, songs, and basic music notes through fun and engaging activities.
+                                </p>
+                                <div
+                                    class="flex items-center justify-between mb-5 pt-4 border-t border-blue-400/20 dark:border-cyan-300/20">
+                                    <div class="flex items-baseline gap-2">
+                                        <span class="text-sm text-gray-400 dark:text-gray-500 line-through">$45</span>
+                                        <span class="text-2xl font-bold text-indigo-600 dark:text-amber-300">$29</span>
+                                    </div>
+                                    <span
+                                        class="text-xs font-medium text-green-600 dark:text-green-400 bg-green-100 dark:bg-green-900/30 px-2 py-1 rounded">Save
+                                        $16</span>
+                                </div>
+                                <a href="./course-details.html"
+                                    class="w-full inline-flex items-center justify-center text-white bg-blue-400 hover:bg-blue-500 dark:bg-cyan-300 dark:hover:bg-cyan-400 dark:text-indigo-900 font-medium rounded-lg text-sm px-5 py-2.5 transition-colors duration-200">
+                                    <i class="fa-solid fa-cart-shopping me-2"></i> Enroll Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== البطاقة 6 ===== -->
+                    <div class="swiper-slide h-auto">
+                        <div
+                            class="course-card group h-full bg-white/95 dark:bg-indigo-700/95 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-blue-400/30 dark:border-cyan-300/30">
+                            <div class="relative overflow-hidden">
+                                <img src="assets/images/code.jpg"
+                                    class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                                    alt="Coding Course">
+                                <span
+                                    class="absolute top-4 left-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full">-50%</span>
+                                <span
+                                    class="absolute top-4 right-4 bg-white/90 dark:bg-indigo-800/90 text-indigo-600 dark:text-amber-300 text-xs font-bold px-3 py-1 rounded-full">
+                                    <i class="fa-solid fa-star text-amber-400 me-1"></i> 4.8
+                                </span>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center gap-2 mb-3">
+                                    <i class="fa-solid fa-code text-amber-400 dark:text-amber-300"></i>
+                                    <span
+                                        class="text-xs font-semibold text-gray-600 dark:text-amber-100! uppercase tracking-wider">Coding</span>
+                                </div>
+                                <h3
+                                    class="text-xl font-bold text-indigo-600 dark:text-amber-300 mb-2 group-hover:text-blue-400 dark:group-hover:text-cyan-300 transition-colors duration-200">
+                                    Intro to Coding
+                                </h3>
+                                <p class="text-sm text-gray-600 dark:text-amber-100! mb-5">
+                                    Learn the basics of coding through games, puzzles, and fun interactive projects.
+                                </p>
+                                <div
+                                    class="flex items-center justify-between mb-5 pt-4 border-t border-blue-400/20 dark:border-cyan-300/20">
+                                    <div class="flex items-baseline gap-2">
+                                        <span class="text-sm text-gray-400 dark:text-gray-500 line-through">$99</span>
+                                        <span class="text-2xl font-bold text-indigo-600 dark:text-amber-300">$49</span>
+                                    </div>
+                                    <span
+                                        class="text-xs font-medium text-green-600 dark:text-green-400 bg-green-100 dark:bg-green-900/30 px-2 py-1 rounded">Save
+                                        $50</span>
+                                </div>
+                                <a href="./course-details.html"
+                                    class="w-full inline-flex items-center justify-center text-white bg-blue-400 hover:bg-blue-500 dark:bg-cyan-300 dark:hover:bg-cyan-400 dark:text-indigo-900 font-medium rounded-lg text-sm px-5 py-2.5 transition-colors duration-200">
+                                    <i class="fa-solid fa-cart-shopping me-2"></i> Enroll Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- ===== Pagination ===== -->
+                <div class="swiper-pagination !bottom-0"></div>
+            </div>
+
+            <!-- ===== أزرار Navigation ===== -->
+            <div class="flex justify-center items-center gap-3 mt-8">
+                <button
+                    class="courses-prev w-11 h-11 rounded-full bg-white/95 dark:bg-indigo-700/95 border border-blue-400/30 dark:border-cyan-300/30 flex items-center justify-center text-indigo-600 dark:text-amber-300 hover:bg-blue-400 hover:text-white dark:hover:bg-cyan-300 dark:hover:text-indigo-900 transition-colors duration-200">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button
+                    class="courses-next w-11 h-11 rounded-full bg-white/95 dark:bg-indigo-700/95 border border-blue-400/30 dark:border-cyan-300/30 flex items-center justify-center text-indigo-600 dark:text-amber-300 hover:bg-blue-400 hover:text-white dark:hover:bg-cyan-300 dark:hover:text-indigo-900 transition-colors duration-200">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <!-- ===== زر عرض المزيد ===== -->
+            <div class="text-center mt-12">
+                <a href="./course-details.html"
+                    class="inline-flex items-center justify-center text-indigo-600 dark:text-white bg-amber-300 dark:bg-indigo-500 border border-amber-400 dark:border-indigo-400 hover:bg-amber-400 dark:hover:bg-indigo-400 hover:text-indigo-800 dark:hover:text-white focus:ring-4 focus:ring-amber-300 dark:focus:ring-indigo-400 font-medium rounded-lg text-base px-8 py-3 focus:outline-none transition-colors duration-200">
+                    View All Courses
+                    <i class="fa-solid fa-arrow-right ms-2"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+    <!-- ===== End Courses Section ===== -->
+
+
+
+
+    <!-- ===== FAQ Section ===== -->
+    <section
+        class="faq py-16 md:py-24 bg-linear-to-br from-cyan-100 via-amber-100 to-amber-200 dark:from-indigo-700 dark:via-indigo-800 dark:to-indigo-900">
+        <div class="max-w-4xl mx-auto px-4">
+
+            <!-- ===== عنوان القسم ===== -->
+            <div class="text-center mb-12 md:mb-16">
+
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-indigo-600 dark:text-amber-300 mb-4">
+                    Frequently Asked Questions 🤔
+                </h2>
+                <p class="text-gray-700 dark:text-amber-100! text-base md:text-lg max-w-2xl mx-auto">
+                    Everything you need to know about Kids EdTech. Can't find your answer? Feel free to contact us!
+                </p>
+            </div>
+
+            <!-- ===== Accordion (Flowbite) ===== -->
+            <div id="faq-accordion" data-accordion="collapse">
+
+                <!-- ===== السؤال 1 ===== -->
+                <h2 id="faq-heading-1">
+                    <button type="button"
+                        class="cursor-pointer flex items-center justify-between w-full p-5 md:p-6 font-medium text-left rounded-t-2xl border border-blue-400/30 dark:border-cyan-300/30 bg-white/95 dark:bg-indigo-700/95 backdrop-blur-sm text-indigo-600 dark:text-amber-300 hover:bg-amber-100 dark:hover:bg-indigo-600/95 aria-expanded:bg-indigo-600 dark:aria-expanded:bg-cyan-300 aria-expanded:text-white dark:aria-expanded:text-indigo-900 focus:outline-none transition-colors duration-200"
+                        data-accordion-target="#faq-body-1" aria-expanded="true" aria-controls="faq-body-1">
+                        <span class="flex items-center gap-4">
+                            <i class="fa-solid fa-user-plus text-blue-400 dark:text-cyan-300"></i>
+                            How do I create an account for my child?
+                        </span>
+                        <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </h2>
+                <div id="faq-body-1" class="hidden" aria-labelledby="faq-heading-1">
+                    <div
+                        class="p-5 md:p-6 border border-t-0 border-blue-400/30 dark:border-cyan-300/30 bg-white/95 dark:bg-indigo-700/95 backdrop-blur-sm rounded-b-2xl">
+                        <p class="text-sm md:text-base text-gray-700 dark:!text-amber-100 leading-relaxed">
+                            Creating an account is simple! Click the "Sign Up" button, enter your email and a secure
+                            password, then add your child's name and age. The whole process takes less than 2 minutes.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ===== السؤال 2 ===== -->
+                <h2 id="faq-heading-2" class="mt-4">
+                    <button type="button"
+                        class="cursor-pointer flex items-center justify-between w-full p-5 md:p-6 font-medium text-left rounded-2xl border border-blue-400/30 dark:border-cyan-300/30 bg-white/95 dark:bg-indigo-700/95 backdrop-blur-sm text-indigo-600 dark:text-amber-300 hover:bg-amber-100 dark:hover:bg-indigo-600/95 aria-expanded:bg-indigo-600 dark:aria-expanded:bg-cyan-300 aria-expanded:text-white dark:aria-expanded:text-indigo-900 focus:outline-none transition-colors duration-200"
+                        data-accordion-target="#faq-body-2" aria-expanded="false" aria-controls="faq-body-2">
+                        <span class="flex items-center gap-4">
+                            <i class="fa-solid fa-shield-halved text-amber-400 dark:text-amber-300"></i>
+                            Is the platform safe for my child?
+                        </span>
+                        <svg data-accordion-icon class="w-5 h-5 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </h2>
+                <div id="faq-body-2" class="hidden" aria-labelledby="faq-heading-2">
+                    <div
+                        class="p-5 md:p-6 border border-t-0 border-blue-400/30 dark:border-cyan-300/30 bg-white/95 dark:bg-indigo-700/95 backdrop-blur-sm rounded-b-2xl">
+                        <p class="text-sm md:text-base text-gray-700 dark:!text-amber-100 leading-relaxed">
+                            Absolutely! Kids EdTech is 100% safe, ad-free, and COPPA compliant. We never collect
+                            personal information from children, and all content is reviewed by educators before
+                            publishing.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ===== السؤال 3 ===== -->
+                <h2 id="faq-heading-3" class="mt-4">
+                    <button type="button"
+                        class="cursor-pointer flex items-center justify-between w-full p-5 md:p-6 font-medium text-left rounded-2xl border border-blue-400/30 dark:border-cyan-300/30 bg-white/95 dark:bg-indigo-700/95 backdrop-blur-sm text-indigo-600 dark:text-amber-300 hover:bg-amber-100 dark:hover:bg-indigo-600/95 aria-expanded:bg-indigo-600 dark:aria-expanded:bg-cyan-300 aria-expanded:text-white dark:aria-expanded:text-indigo-900 focus:outline-none transition-colors duration-200"
+                        data-accordion-target="#faq-body-3" aria-expanded="false" aria-controls="faq-body-3">
+                        <span class="flex items-center gap-4">
+                            <i class="fa-solid fa-credit-card text-blue-400 dark:text-cyan-300"></i>
+                            What payment methods do you accept?
+                        </span>
+                        <svg data-accordion-icon class="w-5 h-5 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </h2>
+                <div id="faq-body-3" class="hidden" aria-labelledby="faq-heading-3">
+                    <div
+                        class="p-5 md:p-6 border border-t-0 border-blue-400/30 dark:border-cyan-300/30 bg-white/95 dark:bg-indigo-700/95 backdrop-blur-sm rounded-b-2xl">
+                        <p class="text-sm md:text-base text-gray-700 dark:!text-amber-100 leading-relaxed">
+                            We accept all major credit cards (Visa, Mastercard, American Express), PayPal, and Apple
+                            Pay. All payments are processed securely through encrypted connections.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ===== السؤال 4 ===== -->
+                <h2 id="faq-heading-4" class="mt-4">
+                    <button type="button"
+                        class="cursor-pointer flex items-center justify-between w-full p-5 md:p-6 font-medium text-left rounded-2xl border border-blue-400/30 dark:border-cyan-300/30 bg-white/95 dark:bg-indigo-700/95 backdrop-blur-sm text-indigo-600 dark:text-amber-300 hover:bg-amber-100 dark:hover:bg-indigo-600/95 aria-expanded:bg-indigo-600 dark:aria-expanded:bg-cyan-300 aria-expanded:text-white dark:aria-expanded:text-indigo-900 focus:outline-none transition-colors duration-200"
+                        data-accordion-target="#faq-body-4" aria-expanded="false" aria-controls="faq-body-4">
+                        <span class="flex items-center gap-4">
+                            <i class="fa-solid fa-mobile-screen text-amber-400 dark:text-amber-300"></i>
+                            Can my child learn on a tablet or phone?
+                        </span>
+                        <svg data-accordion-icon class="w-5 h-5 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </h2>
+                <div id="faq-body-4" class="hidden" aria-labelledby="faq-heading-4">
+                    <div
+                        class="p-5 md:p-6 border border-t-0 border-blue-400/30 dark:border-cyan-300/30 bg-white/95 dark:bg-indigo-700/95 backdrop-blur-sm rounded-b-2xl">
+                        <p class="text-sm md:text-base text-gray-700 dark:!text-amber-100 leading-relaxed">
+                            Yes! Kids EdTech is fully responsive and works on all devices including tablets,
+                            smartphones, and computers. Your child can continue learning anywhere, anytime.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ===== السؤال 5 ===== -->
+                <h2 id="faq-heading-5" class="mt-4">
+                    <button type="button"
+                        class="cursor-pointer flex items-center justify-between w-full p-5 md:p-6 font-medium text-left rounded-2xl border border-blue-400/30 dark:border-cyan-300/30 bg-white/95 dark:bg-indigo-700/95 backdrop-blur-sm text-indigo-600 dark:text-amber-300 hover:bg-amber-100 dark:hover:bg-indigo-600/95 aria-expanded:bg-indigo-600 dark:aria-expanded:bg-cyan-300 aria-expanded:text-white dark:aria-expanded:text-indigo-900 focus:outline-none transition-colors duration-200"
+                        data-accordion-target="#faq-body-5" aria-expanded="false" aria-controls="faq-body-5">
+                        <span class="flex items-center gap-4">
+                            <i class="fa-solid fa-rotate-left text-blue-400 dark:text-cyan-300"></i>
+                            Can I get a refund if I'm not satisfied?
+                        </span>
+                        <svg data-accordion-icon class="w-5 h-5 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </h2>
+                <div id="faq-body-5" class="hidden" aria-labelledby="faq-heading-5">
+                    <div
+                        class="p-5 md:p-6 border border-t-0 border-blue-400/30 dark:border-cyan-300/30 bg-white/95 dark:bg-indigo-700/95 backdrop-blur-sm rounded-b-2xl">
+                        <p class="text-sm md:text-base text-gray-700 dark:!text-amber-100 leading-relaxed">
+                            Of course! We offer a 30-day money-back guarantee on all courses. If you're not completely
+                            satisfied, contact us within 30 days and we'll refund your payment, no questions asked.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ===== السؤال 6 ===== -->
+                <h2 id="faq-heading-6" class="mt-4">
+                    <button type="button"
+                        class="cursor-pointer flex items-center justify-between w-full p-5 md:p-6 font-medium text-left rounded-2xl border border-blue-400/30 dark:border-cyan-300/30 bg-white/95 dark:bg-indigo-700/95 backdrop-blur-sm text-indigo-600 dark:text-amber-300 hover:bg-amber-100 dark:hover:bg-indigo-600/95 aria-expanded:bg-indigo-600 dark:aria-expanded:bg-cyan-300 aria-expanded:text-white dark:aria-expanded:text-indigo-900 focus:outline-none transition-colors duration-200"
+                        data-accordion-target="#faq-body-6" aria-expanded="false" aria-controls="faq-body-6">
+                        <span class="flex items-center gap-4">
+                            <i class="fa-solid fa-headset text-amber-400 dark:text-amber-300"></i>
+                            How can I contact support?
+                        </span>
+                        <svg data-accordion-icon class="w-5 h-5 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </h2>
+                <div id="faq-body-6" class="hidden" aria-labelledby="faq-heading-6">
+                    <div
+                        class="p-5 md:p-6 border border-t-0 border-blue-400/30 dark:border-cyan-300/30 bg-white/95 dark:bg-indigo-700/95 backdrop-blur-sm rounded-b-2xl">
+                        <p class="text-sm md:text-base text-gray-700 dark:!text-amber-100 leading-relaxed">
+                            Our support team is available 24/7! You can reach us via email at support@kidsedtech.com,
+                            through live chat on our website, or by phone at +1 (800) 123-4567.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ===== CTA ===== -->
+            <div class="mt-12 text-center">
+                <p class="text-gray-700 dark:text-amber-100! mb-4">
+                    Still have questions?
+                </p>
+                <a href="#"
+                    class="inline-flex items-center justify-center text-indigo-600 dark:text-white bg-amber-300 dark:bg-indigo-500 border border-amber-400 dark:border-indigo-400 hover:bg-amber-400 dark:hover:bg-indigo-400 hover:text-indigo-800 dark:hover:text-white focus:ring-4 focus:ring-amber-300 dark:focus:ring-indigo-400 font-medium rounded-lg text-base px-8 py-3 focus:outline-none transition-colors duration-200">
+                    <i class="fa-solid fa-envelope me-2"></i>
+                    Contact Us
+                </a>
+            </div>
+
+        </div>
+    </section>
+    <!-- == End FAQ Section === -->
+
+
+    <!-- ===== Blog Section ===== -->
+    <section
+        class="blog py-16 md:py-24 bg-linear-to-br from-cyan-100 via-amber-100 to-amber-200 dark:from-indigo-700 dark:via-indigo-800 dark:to-indigo-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- ===== عنوان القسم ===== -->
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-indigo-600 dark:text-amber-300 mb-4">
+                    Latest Articles & News 📚
+                </h2>
+                <p class="text-gray-700 dark:text-amber-100! text-base md:text-lg max-w-2xl mx-auto">
+                    Discover helpful guides, tips, and insights about EdTech, parenting, and modern learning techniques.
+                </p>
+            </div>
+
+            <!-- ===== كروت المقالات ===== -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- مقال 1 -->
+                <article
+                    class="bg-white/95 dark:bg-indigo-700/95 backdrop-blur-sm rounded-3xl border border-blue-400/30 dark:border-cyan-300/30 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col group">
+                    <div
+                        class="relative overflow-hidden h-60 bg-linear-to-tr from-amber-200 via-amber-100 to-amber-50 dark:from-indigo-900 dark:to-indigo-700">
+                        <img src="assets/images/tablet.jpg" alt="Child learning on tablet"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+
+                    <div class="p-6 flex flex-col grow">
+                        <div
+                            class="flex items-center gap-4 text-xs font-medium text-gray-500 dark:text-amber-200/80 mb-3">
+                            <span><i class="fa-regular fa-calendar me-1 text-indigo-500 dark:text-cyan-300"></i> Sep 12,
+                                2026</span>
+                            <span><i class="fa-regular fa-clock me-1 text-indigo-500 dark:text-cyan-300"></i> 5 min
+                                read</span>
+                        </div>
+                        <h3
+                            class="text-xl font-bold text-indigo-600 dark:text-amber-300 mb-3 group-hover:text-indigo-800 dark:group-hover:text-amber-400 transition-colors">
+                            5 Ways EdTech Boosts Children's Creativity 🚀
+                        </h3>
+                        <p class="text-gray-700 dark:text-amber-100! text-sm leading-relaxed mb-6 grow">
+                            Learn how interactive digital tools help kids think outside the box and solve problems
+                            faster.
+                        </p>
+                        <a href="singleBlog.html"
+                            class="inline-flex items-center text-indigo-600 dark:text-cyan-300 font-bold text-sm hover:underline mt-auto">
+                            Read Article <i
+                                class="fa-solid fa-arrow-right ms-2 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- مقال 2 -->
+                <article
+                    class="bg-white/95 dark:bg-indigo-700/95 backdrop-blur-sm rounded-3xl border border-blue-400/30 dark:border-cyan-300/30 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col group">
+                    <div
+                        class="relative overflow-hidden h-60 bg-linear-to-tr from-cyan-200 via-sky-100 to-indigo-50 dark:from-indigo-900 dark:to-indigo-700">
+                        <img src="assets/images/happy.jpg" alt="Happy kid learning online"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+
+                    <div class="p-6 flex flex-col grow">
+                        <div
+                            class="flex items-center gap-4 text-xs font-medium text-gray-500 dark:text-amber-200/80 mb-3">
+                            <span><i class="fa-regular fa-calendar me-1 text-indigo-500 dark:text-cyan-300"></i> Sep 08,
+                                2026</span>
+                            <span><i class="fa-regular fa-clock me-1 text-indigo-500 dark:text-cyan-300"></i> 4 min
+                                read</span>
+                        </div>
+                        <h3
+                            class="text-xl font-bold text-indigo-600 dark:text-amber-300 mb-3 group-hover:text-indigo-800 dark:group-hover:text-amber-400 transition-colors">
+                            Keeping Your Child Safe Online: A Parent's Guide 🔒
+                        </h3>
+                        <p class="text-gray-700 dark:text-amber-100! text-sm leading-relaxed mb-6 grow">
+                            Essential steps and tools to ensure your kids have a secure digital learning environment.
+                        </p>
+                        <a href="singleBlog.html"
+                            class="inline-flex items-center text-indigo-600 dark:text-cyan-300 font-bold text-sm hover:underline mt-auto">
+                            Read Article <i
+                                class="fa-solid fa-arrow-right ms-2 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- مقال 3 -->
+                <article
+                    class="bg-white/95 dark:bg-indigo-700/95 backdrop-blur-sm rounded-3xl border border-blue-400/30 dark:border-cyan-300/30 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col group">
+                    <div
+                        class="relative overflow-hidden h-60 bg-linear-to-tr from-pink-200 via-rose-100 to-amber-50 dark:from-indigo-900 dark:to-indigo-700">
+                        <img src="assets/images/lab.jpg" alt="Child using laptop happily"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+
+                    </div>
+
+                    <div class="p-6 flex flex-col grow">
+                        <div
+                            class="flex items-center gap-4 text-xs font-medium text-gray-500 dark:text-amber-200/80 mb-3">
+                            <span><i class="fa-regular fa-calendar me-1 text-indigo-500 dark:text-cyan-300"></i> Aug 29,
+                                2026</span>
+                            <span><i class="fa-regular fa-clock me-1 text-indigo-500 dark:text-cyan-300"></i> 6 min
+                                read</span>
+                        </div>
+                        <h3
+                            class="text-xl font-bold text-indigo-600 dark:text-amber-300 mb-3 group-hover:text-indigo-800 dark:group-hover:text-amber-400 transition-colors">
+                            Why Game-Based Learning Works So Well 🧩
+                        </h3>
+                        <p class="text-gray-700 dark:text-amber-100! text-sm leading-relaxed mb-6 grow">
+                            Discover the science behind educational games and why they hold children's attention.
+                        </p>
+                        <a href="singleBlog.html"
+                            class="inline-flex items-center text-indigo-600 dark:text-cyan-300 font-bold text-sm hover:underline mt-auto">
+                            Read Article <i
+                                class="fa-solid fa-arrow-right ms-2 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- ===== زر عرض المزيد ===== -->
+            <div class="mt-12 text-center">
+                <a href="#"
+                    class="inline-flex items-center justify-center text-indigo-600 dark:text-white bg-amber-300 dark:bg-indigo-500 border border-amber-400 dark:border-indigo-400 hover:bg-amber-400 dark:hover:bg-indigo-400 hover:text-indigo-800 dark:hover:text-white focus:ring-4 focus:ring-amber-300 dark:focus:ring-indigo-400 font-bold rounded-2xl text-base px-8 py-3.5 focus:outline-none transition-colors duration-200 shadow-md">
+                    View All Articles
+                    <i class="fa-solid fa-arrow-right ms-2"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+    <!-- ===== End Blog Section ===== -->
+
+
+    <!-- ===== Newsletter Section ===== -->
+    <section
+        class="newsletter py-16 md:py-24 bg-linear-to-br from-amber-200 via-amber-100 to-cyan-100 dark:from-indigo-900 dark:via-indigo-800 dark:to-indigo-700">
+        <div class="max-w-4xl mx-auto px-4">
+
+            <!-- ===== المحتوى ===== -->
+            <div
+                class="bg-white/95 dark:bg-indigo-700/95 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-lg border border-blue-400/30 dark:border-cyan-300/30 text-center">
+
+                <!-- ===== أيقونة ===== -->
+                <div
+                    class="flex items-center justify-center w-16 h-16 mx-auto mb-6 rounded-full bg-amber-300 dark:bg-amber-400">
+                    <i class="fa-solid fa-envelope-open-text text-2xl text-indigo-600 dark:text-indigo-900"></i>
+                </div>
+
+                <!-- ===== العنوان ===== -->
+                <h2 class="text-3xl md:text-4xl font-bold text-indigo-600 dark:text-amber-300 mb-4">
+                    Subscribe to Our Newsletter 📬
+                </h2>
+
+                <!-- ===== الوصف ===== -->
+                <p class="text-gray-700 dark:!text-amber-100 text-base md:text-lg mb-8 max-w-2xl mx-auto">
+                    Get the latest courses, fun activities, and exclusive offers delivered straight to your inbox. No
+                    spam, we promise!
+                </p>
+
+                <!-- ===== الفورم ===== -->
+                <form class="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
+
+                    <!-- حقل الإيميل -->
+                    <div class="relative flex-grow">
+                        <div class="absolute inset-y-0 start-0 flex items-center ps-4 pointer-events-none">
+                            <i class="fa-solid fa-envelope text-gray-400 dark:text-amber-200/60"></i>
+                        </div>
+                        <input type="email" placeholder="Enter your email address"
+                            class="w-full ps-11 pe-4 py-3.5 rounded-lg border border-blue-400/30 dark:border-cyan-300/30 bg-white dark:bg-indigo-800/50 text-gray-800 dark:text-amber-100 placeholder-gray-400 dark:placeholder-amber-200/50 focus:outline-none focus:border-indigo-500 dark:focus:border-cyan-300 transition-colors duration-200"
+                            required>
+                    </div>
+
+                    <!-- زر الاشتراك -->
+                    <button type="submit"
+                        class="inline-flex items-center justify-center text-white bg-blue-400 hover:bg-blue-500 dark:bg-cyan-300 dark:hover:bg-cyan-400 dark:text-indigo-900 border border-transparent font-medium rounded-lg text-base px-6 py-3.5 focus:outline-none transition-colors duration-200 whitespace-nowrap">
+                        <i class="fa-solid fa-paper-plane me-2"></i>
+                        Subscribe
+                    </button>
+
+                </form>
+
+                <!-- ===== ملاحظة ===== -->
+                <p class="text-xs md:text-sm text-gray-500 dark:!text-amber-100/70 mt-4">
+                    <i class="fa-solid fa-lock me-1"></i>
+                    We respect your privacy. Unsubscribe at any time.
+                </p>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- ===== Footer Section ===== -->
+    <footer
+        class="footer bg-linear-to-br from-amber-200 via-amber-100 to-cyan-100 dark:from-indigo-900 dark:via-indigo-800 dark:to-indigo-700 border-t border-blue-400/30 dark:border-cyan-300/30">
+        <div class="max-w-7xl mx-auto px-4 py-12 md:py-16">
+
+            <!-- ===== الجزء العلوي ===== -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-10">
+
+                <!-- ===== العمود 1: اللوجو والوصف ===== -->
+                <div class="sm:col-span-2 lg:col-span-1">
+                    <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse mb-4">
+                        <img src="./assets/images/logo.png" class="h-12" alt="Kids EdTech Logo" />
+                        <span class="text-xl font-bold text-indigo-600 dark:text-amber-300 whitespace-nowrap">
+                            Kids EdTech
+                        </span>
+                    </a>
+                    <p class="text-sm text-gray-700 dark:!text-amber-100 leading-relaxed mb-5">
+                        A safe and exciting learning platform where children explore, play, and grow through fun
+                        educational adventures.
+                    </p>
+
+                    <!-- سوشيال ميديا -->
+                    <div class="flex gap-3">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-blue-400 dark:bg-cyan-300 flex items-center justify-center text-white dark:text-indigo-900 hover:bg-blue-500 dark:hover:bg-cyan-400 transition-colors duration-200">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-blue-400 dark:bg-cyan-300 flex items-center justify-center text-white dark:text-indigo-900 hover:bg-blue-500 dark:hover:bg-cyan-400 transition-colors duration-200">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-blue-400 dark:bg-cyan-300 flex items-center justify-center text-white dark:text-indigo-900 hover:bg-blue-500 dark:hover:bg-cyan-400 transition-colors duration-200">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-blue-400 dark:bg-cyan-300 flex items-center justify-center text-white dark:text-indigo-900 hover:bg-blue-500 dark:hover:bg-cyan-400 transition-colors duration-200">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ===== العمود 2: Quick Links ===== -->
+                <div>
+                    <h3 class="text-lg font-bold text-indigo-600 dark:text-amber-300 mb-5">
+                        Quick Links
+                    </h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#"
+                                class="text-sm text-gray-700 dark:!text-amber-100 hover:text-indigo-600 dark:hover:text-amber-300 transition-colors duration-200 flex items-center gap-2">
+                                <i class="fa-solid fa-chevron-right text-xs text-blue-400 dark:text-cyan-300"></i>
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-sm text-gray-700 dark:!text-amber-100 hover:text-indigo-600 dark:hover:text-amber-300 transition-colors duration-200 flex items-center gap-2">
+                                <i class="fa-solid fa-chevron-right text-xs text-blue-400 dark:text-cyan-300"></i>
+                                Adventures
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-sm text-gray-700 dark:!text-amber-100 hover:text-indigo-600 dark:hover:text-amber-300 transition-colors duration-200 flex items-center gap-2">
+                                <i class="fa-solid fa-chevron-right text-xs text-blue-400 dark:text-cyan-300"></i>
+                                Achievements
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-sm text-gray-700 dark:!text-amber-100 hover:text-indigo-600 dark:hover:text-amber-300 transition-colors duration-200 flex items-center gap-2">
+                                <i class="fa-solid fa-chevron-right text-xs text-blue-400 dark:text-cyan-300"></i>
+                                Games
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-sm text-gray-700 dark:!text-amber-100 hover:text-indigo-600 dark:hover:text-amber-300 transition-colors duration-200 flex items-center gap-2">
+                                <i class="fa-solid fa-chevron-right text-xs text-blue-400 dark:text-cyan-300"></i>
+                                Parents
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- ===== العمود 3: Categories ===== -->
+                <div>
+                    <h3 class="text-lg font-bold text-indigo-600 dark:text-amber-300 mb-5">
+                        Categories
+                    </h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#"
+                                class="text-sm text-gray-700 dark:!text-amber-100 hover:text-indigo-600 dark:hover:text-amber-300 transition-colors duration-200 flex items-center gap-2">
+                                <i class="fa-solid fa-chevron-right text-xs text-blue-400 dark:text-cyan-300"></i>
+                                Mathematics
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-sm text-gray-700 dark:!text-amber-100 hover:text-indigo-600 dark:hover:text-amber-300 transition-colors duration-200 flex items-center gap-2">
+                                <i class="fa-solid fa-chevron-right text-xs text-blue-400 dark:text-cyan-300"></i>
+                                Science
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-sm text-gray-700 dark:!text-amber-100 hover:text-indigo-600 dark:hover:text-amber-300 transition-colors duration-200 flex items-center gap-2">
+                                <i class="fa-solid fa-chevron-right text-xs text-blue-400 dark:text-cyan-300"></i>
+                                Language
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-sm text-gray-700 dark:!text-amber-100 hover:text-indigo-600 dark:hover:text-amber-300 transition-colors duration-200 flex items-center gap-2">
+                                <i class="fa-solid fa-chevron-right text-xs text-blue-400 dark:text-cyan-300"></i>
+                                Art & Craft
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-sm text-gray-700 dark:!text-amber-100 hover:text-indigo-600 dark:hover:text-amber-300 transition-colors duration-200 flex items-center gap-2">
+                                <i class="fa-solid fa-chevron-right text-xs text-blue-400 dark:text-cyan-300"></i>
+                                Music
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- ===== العمود 4: Contact ===== -->
+                <div>
+                    <h3 class="text-lg font-bold text-indigo-600 dark:text-amber-300 mb-5">
+                        Contact Us
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <div
+                                class="flex-shrink-0 w-8 h-8 rounded-full bg-amber-300 dark:bg-amber-400 flex items-center justify-center">
+                                <i class="fa-solid fa-location-dot text-xs text-indigo-600 dark:text-indigo-900"></i>
+                            </div>
+                            <span class="text-sm text-gray-700 dark:!text-amber-100">
+                                123 Learning Street,<br>Kids City, KC 12345
+                            </span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div
+                                class="flex-shrink-0 w-8 h-8 rounded-full bg-amber-300 dark:bg-amber-400 flex items-center justify-center">
+                                <i class="fa-solid fa-phone text-xs text-indigo-600 dark:text-indigo-900"></i>
+                            </div>
+                            <a href="tel:+18001234567"
+                                class="text-sm text-gray-700 dark:!text-amber-100 hover:text-indigo-600 dark:hover:text-amber-300 transition-colors duration-200">
+                                +1 (800) 123-4567
+                            </a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div
+                                class="flex-shrink-0 w-8 h-8 rounded-full bg-amber-300 dark:bg-amber-400 flex items-center justify-center">
+                                <i class="fa-solid fa-envelope text-xs text-indigo-600 dark:text-indigo-900"></i>
+                            </div>
+                            <a href="mailto:support@kidsedtech.com"
+                                class="text-sm text-gray-700 dark:!text-amber-100 hover:text-indigo-600 dark:hover:text-amber-300 transition-colors duration-200">
+                                support@kidsedtech.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- ===== الخط الفاصل ===== -->
+            <div class="border-t border-blue-400/30 dark:border-cyan-300/30 pt-6">
+
+                <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+
+                    <!-- حقوق النشر -->
+                    <p class="text-sm text-gray-700 dark:text-amber-100! text-center md:text-left">
+                        © 2026 <span class="font-bold text-indigo-600 dark:text-amber-300">Kids EdTech</span>. All
+                        rights reserved.
+                    </p>
+
+                    <!-- روابط السياسات -->
+                    <ul class="flex flex-wrap items-center justify-center gap-4 md:gap-6">
+                        <li>
+                            <a href="#"
+                                class="text-sm text-gray-700 dark:text-amber-100! hover:text-indigo-600 dark:hover:text-amber-300 transition-colors duration-200">
+                                Privacy Policy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-sm text-gray-700 dark:!text-amber-100 hover:text-indigo-600 dark:hover:text-amber-300 transition-colors duration-200">
+                                Terms of Service
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-sm text-gray-700 dark:!text-amber-100 hover:text-indigo-600 dark:hover:text-amber-300 transition-colors duration-200">
+                                Cookies
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <!-- Made with love -->
+                <p class="text-xs text-center text-gray-500 dark:!text-amber-100/70 mt-4">
+                    Made with <i class="fa-solid fa-heart text-red-500 mx-1"></i> for kids around the world
+                </p>
+
+            </div>
+
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
