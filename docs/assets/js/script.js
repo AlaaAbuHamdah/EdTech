@@ -155,13 +155,7 @@ const coursesSwiper = new Swiper('.courses-swiper', {
         1024: { slidesPerView: 3, spaceBetween: 24 },
         1280: { slidesPerView: 4, spaceBetween: 24 },
     },
-    
-    autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-    },
-    
+
     grabCursor: true,
     keyboard: { enabled: true },
 });
